@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="description" content="Formulario con Accesibilidad">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulario con Accesibilidad</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="Logo">
+        <h1>Prueba HTML/CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#student-info" accesskey="i">INFO</a></li>
+                <li><a href="#html-questions" accesskey="h">HTML</a></li>
+                <li><a href="#css-questions" accesskey="c">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+            <section role="region" aria-labelledby="student-info">
+                <h2 id="student-info">Información del Estudiante</h2>
+                <div class="info">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="info">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="juan@correo.com">
+                </div>
+                <div class="info">
+                    <label for="birthdate">BDay<span class="sr-only">(Fecha de Nacimiento)</span></label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+            </section>
+            <section role="region" aria-labelledby="html-questions">
+                <h2 id="html-questions">Preguntas de HTML</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" name="question-1">
+                        <legend>Con cualquier editor de texto plano podemos escribir el código HTML.</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input value="True" type="radio" name="q1" id="q1-a1">
+                                    Verdadero
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input value="False" type="radio" name="q1" id="q1-a2">
+                                    Falso
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question" name="question-2">
+                        <legend>Para que una página web se pueda ver desde cualquier ordenador conectado a internet debe
+                            estar guardada en un servidor de internet.</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input value="True" type="radio" name="q2" id="q2-a1">
+                                    Verdadero
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2">
+                                    <input value="False" type="radio" name="q2" id="q2-a2">
+                                    Falso
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="css-questions">
+                <h2 id="css-questions">Preguntas de CSS</h2>
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="q3">CSS controla el aspecto gráfico de una página web mediante ___________ indicando
+                            al navegador como se deben visualizar los elementos de un documento HTML</label>
+                    </div>
+                    <div class="answer">
+                        <select name="q3" id="q3" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="stylesheet">Las hojas de estilo</option>
+                            <option value="html-code">El códoigo HTML</option>
+                            <option value="php-program">Un programa PHP</option>
+                            <option value="dynamic-web">Una página dinámica</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="q4">¿Qué atributo HTML nos permite aplicar los estilos CSS a una página web?</label>
+                    </div>
+                    <div class="answer">
+                        <textarea name="q3" id="q3" cols=80 rows="5" placeholder="Escribe la respuesta"></textarea>
+                    </div>
+                </div>
+            </section>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+            San Francisco<br />
+            California<br />
+            USA
+        </address>
+    </footer>
+</body>
+
+</html>
